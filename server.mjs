@@ -33,6 +33,11 @@ if (!SPLUNK_TOKEN) {
 }
 
 // REST API endpoint
+app.get("/teams", (req, res) => {
+  const result = process.env.TEAMS?.split(',') || [];
+  res.status(200).send(result);
+});
+
 app.post("/event", async (req, res) => {
   const eventData = req.body;
   // get the IP of the calling client

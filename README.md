@@ -57,6 +57,8 @@ server that should receive the events:
 - `PP_SPLUNK_SSL` (default is `false`)
 - `PP_SPLUNK_TOKEN` (required) token for the HTTP input (See Splunk Setup below.)
 
+Setting the variable `TEAMS` defines the names of the teams that users can choose from (comma-separated list). Default value is `TEAM A,TEAM B`.
+
 Usually you will set these environment variables in your deployment descriptor. The folder [`kubernetes-manifests`](./kubernetes-manifests/) contains a sample deployment descriptor for Kubernetes based on the [Splunk Operator](https://splunk.github.io/splunk-operator/).
 
 You can apply it by calling:

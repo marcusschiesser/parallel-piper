@@ -34,7 +34,7 @@ if (!SPLUNK_TOKEN) {
 
 // REST API endpoint
 app.get("/teams", (req, res) => {
-  const result = process.env.TEAMS?.split(',') || [];
+  const result = process.env.TEAMS?.split(',') || ['TEAM A', 'TEAM B'];
   res.status(200).send(result);
 });
 
